@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+#app {
+    background-color: #d7c8a8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background-color:  #654c28;
+    align-items: center;
+}
+
+a {
+    color: white;
+    padding: 0px 10px;
+    text-decoration: none;
+    font-size: larger;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    margin: 5px;
+    padding: 0px 10px;
+    color: white;
+    font-size: larger;
+}
+
+#boton-iniciar {
+    border-style: none;
+    background-color: #9d8f6e ;
+    width: 180px;
+    height: 60px;
+    font-size: 18px;
+    align-self: center;
+}
+
+#boton-iniciar:hover {
+    background-color: #9d8f6e ;
+}
+
+#boton-iniciar a {
+    text-decoration: none;
+    color: white;
+}
+
+#nosotros {
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;
+}
+
+#nosotros p {
+    background-color: white;
+    padding: 30px;
+    margin: 20px 20px;
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.301);
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagen img {
+    margin-top: 50px;
+    height: 250px;
+}
+
+#menu-productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c9ac78 ;
+    padding: 50px;
+}
+
+#menu-contenedor {
+    width: 100vh;
+    background-color: #c9ac78 ;
+}
+
+#menu-contenedor div {
+    margin: 30px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.301);
+}
+
+#menu-contenedor div p {
+    margin: 7px;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #654c28;
+    color: white;
+    font-size: larger;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+}
