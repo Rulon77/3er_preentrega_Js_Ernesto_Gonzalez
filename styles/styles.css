@@ -52,6 +52,17 @@ ul li {
     font-size: larger;
 }
 
+
+.navbar nav ul li a {
+    display: flex;
+    text-align:right;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 1rem;
+    font-size: x-large;
+    
+}
+
 #boton-iniciar {
     border-style: none;
     background-color: #9d8f6e ;
@@ -115,6 +126,14 @@ ul li {
     box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.301);
 }
 
+.menu div {
+    margin: 30px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.301);
+}
+
+
 #menu-contenedor div p {
     margin: 7px;
 }
@@ -139,4 +158,8 @@ footer a {
 footer ul {
     display: flex;
     flex-direction: column;
+}
+
+p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }

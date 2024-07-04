@@ -12,9 +12,17 @@ const $botonFinalizar = $('#boton-finalizar');
 const $contenedorDePago = $('#contenedor-pago');
 
 
+
+
+
 const botonAgregar = document.createElement('button');
 botonAgregar.id = 'boton-agregar';
 botonAgregar.textContent = 'Agregar Productos';
+
+const botonVaciar = document.createElement('button');
+botonVaciar.id = 'boton-agregar';
+botonVaciar.textContent = 'Vaciar Carrito';
+
 
 const botonFinalizar = document.createElement('button');
 botonFinalizar.id = 'boton-finalizar';
@@ -97,13 +105,16 @@ const crearMenuDeOpciones = (listaDeProductos) => {
 
 crearMenuDeOpciones(listaSabores);
 $opciones.append(botonAgregar);
+$opciones.append(botonVaciar);
 
 
-const carrito = [];
+let carrito = loadCartFromLocalStorage();
+
 
 const agregarSaboresAlCarrito = () => {
-    const saboresIngresados = document.querySelectorAll('.sabor');
+    let saboresIngresados = document.querySelectorAll('.sabor');
     let id = 0;
+    console.log(saboresIngresados)
     saboresIngresados.forEach(sabor => {
         id++;
         const cantidad = Number(document.querySelector(`#cantidad${id}`).value);
@@ -112,16 +123,21 @@ const agregarSaboresAlCarrito = () => {
             carrito.push({sabor: sabor.value, cantidad: cantidad});
         }
     })
+    saveCartToLocalStorage()
 };
 
+agregarSaboresAlCarrito()
+
 const $carrito = $('#carrito');
-const $saboresElegidos = $('#sabores-elegidos');
-const $cantidadesElegidas = $('#cantidades-elegidas');
+let $saboresElegidos = $('#sabores-elegidos');
+let $cantidadesElegidas = $('#cantidades-elegidas');
 
 botonAgregar.addEventListener('click', () => {
-
-    if (carrito.length === 0) {
         agregarSaboresAlCarrito();
+        
+        $saboresElegidos.innerHTML = "";
+        $cantidadesElegidas.innerHTML = "";
+        
 
         carrito.forEach(producto => {
             const texto = document.createElement('p');
@@ -132,7 +148,6 @@ botonAgregar.addEventListener('click', () => {
             cantidad.textContent = `x ${producto.cantidad}`;
             $cantidadesElegidas.append(cantidad);
         })
-    }
 });
 
 let cantidadDelPedido = 0;
@@ -168,20 +183,35 @@ const finalizarPedido = () => {
 };
 
 
-let clickBotonFinalizar = 0;
+
 
 botonFinalizar.addEventListener('click', () => {
-
-    clickBotonFinalizar++;
-
-    if (clickBotonFinalizar === 1) {
-        if (cantidadDelPedido > 0) {
             finalizarPedido();
             setTimeout(() => {
                 window.location.reload();
             }, 4000);
-        } else {
-            clickBotonFinalizar = 0;
-        }
+        
     }
-});
+);
+
+
+function saveCartToLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(carrito));
+}
+
+function loadCartFromLocalStorage() {
+    const cartData = localStorage.getItem('cart');
+    return cartData ? JSON.parse(cartData) : [];
+}
+
+function vaciarCarrito () {
+    carrito = []
+}
+
+botonVaciar.addEventListener("click", () => {
+    vaciarCarrito()
+    localStorage.clear("cart");
+    $saboresElegidos.innerHTML = "";
+    $cantidadesElegidas.innerHTML = "";
+    $contenedorDePago.innerHTML = ""
+})

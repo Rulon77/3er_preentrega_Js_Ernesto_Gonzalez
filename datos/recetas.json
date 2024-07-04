@@ -1,0 +1,44 @@
+[
+    {
+    "nombre": "Molde Integral",
+    "dificultad": "Baja",
+    "duracion": "8 horas",
+    "ingredientes": ["Harina Integral", "Masa Madre", "Sal", "Manteca", "Levadura Seca", "Agua"],
+    "categoria": "Panificados"
+    },
+    {
+        "nombre": "Molde Centeno",
+        "dificultad": "Medio",
+        "duracion": "12 horas",
+        "ingredientes": ["Harina Integral", "Harina de Centeno", "Sal", "Masa Madre", "Agua"],
+        "categoria": "Panificados"
+    },
+    {
+        "nombre": "Pan de Avena",
+        "dificultad": "Baja",
+        "duracion": "6 horas",
+        "ingredientes": ["Harina de Avena", "Levadura Seca", "Sal", "Miel", "Agua", "Aceite de Oliva"],
+        "categoria": "Panificados"
+    },
+    {
+        "nombre": "Pan de Espelta",
+        "dificultad": "Alta",
+        "duracion": "14 horas",
+        "ingredientes": ["Harina de Espelta", "Masa Madre", "Sal", "Levadura Seca", "Agua"],
+        "categoria": "Panificados"
+    },
+    {
+        "nombre": "Pan de Semillas",
+        "dificultad": "Medio",
+        "duracion": "10 horas",
+        "ingredientes": ["Harina Integral", "Semillas Variadas", "Sal", "Levadura Seca", "Miel", "Agua"],
+        "categoria": "Panificados"
+    },
+    {
+        "nombre": "Pan de Maíz",
+        "dificultad": "Baja",
+        "duracion": "5 horas",
+        "ingredientes": ["Harina de Maíz", "Harina de Trigo", "Levadura Seca", "Sal", "Azúcar", "Agua"],
+        "categoria": "Panificados"
+    }
+]

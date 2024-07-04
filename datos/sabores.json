@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1, 
+        "nombre": "Molde Integral",
+        "codigo": "MI",
+        "descripcion": "Pan de molde 100% integral"
+    },
+    {
+        "id": 2,
+        "nombre": "Molde Centeno",
+        "codigo": "MC",
+        "descripcion": "Pan de molde con un porcentaje de harina integral y de centeno"
+    },
+    {
+        "id": 3,
+        "nombre": "Zeppeling",
+        "codigo": "ZP",
+        "descripcion": "Un tipo de pan de piso con su forma clasica de 'zeppeling'"
+    },
+    {
+        "id": 4,
+        "nombre": "Tipo Campo",
+        "codigo": "TC",
+        "descripcion": "Un clasico de gran corteza 100% integral"
+    },
+    {
+        "id": 5,
+        "nombre": "Baguet",
+        "codigo": "BG",
+        "descripcion": "El rey de los mejores sanguches"
+    },
+    {
+        "id": 6,
+        "nombre": "Rustico",
+        "codigo": "RT",
+        "descripcion": "Pan de mesa, ideal para unas buenas tapas"
+    }
+]
