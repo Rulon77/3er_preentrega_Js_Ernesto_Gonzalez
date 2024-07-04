@@ -4,30 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" href="img/Arroboicono.ico" type="image/png">
     <title>El Arrobo</title>
 </head>
 <body>
     <div id="app">
-        <header>
-            <div id="logo">
-                <a href="./index.html">El Arrobo</a>
-            </div>
-            <nav id="nav">
-                <button id="boton-iniciar">
-                    <a href="./pages/pedido.html">Hace tu pedido</a>
-                </button>
-                <ul id="nav-secciones">
-                    <li>
-                        <a href="#menu-productos">Productos</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <div id="imagen">
+        <header id="header"></header>
+
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" id="imagen">
             <img src="./img/Arrobo.jpg" alt="logo de la panaderia">
         </div>
+        
         <section id="nosotros">
             <h1>¡Bienvenido!</h1>
             <p>En El Arrobo, nos dedicamos a la elaboración de productos 100% integrales, comprometidos con tu salud y el medio ambiente. Trabajamos exclusivamente con pequeños proveedores que cultivan y procesan materias primas de primera calidad, asegurando la frescura y el sabor auténtico en cada bocado.
@@ -56,5 +45,9 @@
     </div>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/menu.js"></script>
+    <script src="./scripts/barra_navegacion.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
 </body>
 </html>

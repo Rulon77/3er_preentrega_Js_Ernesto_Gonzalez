@@ -23,3 +23,4 @@ const listaSabores= [
     new Panificado('Baguet', 'BG', 'El rey de los mejores sanguches'),
     new Panificado('Rustico', 'RT', 'Pan de mesa, ideal para unas buenas tapas'),
 ];
+
